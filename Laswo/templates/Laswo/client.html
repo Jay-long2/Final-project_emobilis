@@ -1,0 +1,21 @@
+{% extends 'Laswo/base.html' %}
+{% block content %}
+<br>
+<br>
+<div class="logo">
+                <img style="padding-left: 30%" src="../../static/Laswo/logo.jpeg" alt="Logo" class="logo-image">
+</div>
+<br>
+<h6 style="color:black;font-size:25px;">Please Enter your details here and a description of the service you need on the message field</h6>
+<br>
+<form style="background-color: brown;padding: 10px" method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert {{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+{% endblock %}

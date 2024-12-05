@@ -1,0 +1,134 @@
+.body{
+    font-family: Arial, sans-serif;
+}
+.content{
+    background-color: black;
+}
+.navbarNav{
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+    padding: 15px;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.container{
+    background-color: blue;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust the logo size as needed */
+    height: auto;
+}
+/* Reset some default styles */
+*.content-overlay {
+    color: rgb(234, 240, 240);
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the navbar container */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa; /* Optional: Sets a background color */
+    padding: 15px;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+/* Centering the logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust the logo size as needed */
+    height: auto;
+}
+
+/* Styling for the navbar items */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px; /* Adds spacing between menu items */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: color 0.3s ease;
+}
+.main-content {
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../static/Laswo/bghouse.jpeg"); /* Initial image */
+    transition: background-image 1s ease-in-out;
+}
+.nav-link:hover {
+    color: #007bff; /* Optional: Change the hover color */
+}
+
+.navbar-toggler {
+    display: none; /* Hide the toggle button since you want the navbar always in a line */
+}
+h1 {
+    font-size: 3rem;
+}
+/* Make the navbar responsive */
+@media (max-width: 600px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Add more padding for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Add more padding for mobile screens */
+    }
+}

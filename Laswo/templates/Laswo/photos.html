@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% extends 'Laswo/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laswo work Photos</title>
+     <link rel="stylesheet" href="{% static 'static/Laswo_style.css' %}">
+    <style>
+        .logo {
+    text-align: center;
+    margin: 20px 0;
+           }
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+         }
+.photos{
+    width:100px;
+    height:300px;
+}
+    </style>
+</head>
+<body>
+{% block content %}
+    <div class="row_2">
+        <div class="col-md-12">
+          <div class="logo">
+              <img style="padding-left: 30%" src="../../static/Laswo/logo.jpeg" alt="Logo" class="logo-image">
+          </div>
+        </div>
+        <div class="photos">
+            <p> Laswo work Photos</p>
+            <img style="padding-left: 30%" src="../../static/Laswo/whitehouse.jpeg" alt="white" class="white-image">
+            <img style="padding-left: 30%" src="../../static/Laswo/angle.jpeg" alt="angle house" class="angle-image">
+            <img style="padding-left: 30%" src="../../static/Laswo/welds.jpeg" alt="bg" class="bg-image">
+            <img style="padding-left: 30%" src="../../static/Laswo/archit.jpeg" alt="archit" class="arch-image">
+        </div>
+    </div>
+{% endblock %}
+</body>

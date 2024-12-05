@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% extends 'Laswo/base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laswo services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '../../static/Laswo/Laswo_style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #94a2a5;
+            color: #0e0d0d;
+            flex: 1;
+            margin-left: 8px;
+            padding: 50px;
+            /*background-image: url("/home/jlong/Pictures/snaps/WhatsApp Image 2024-09-17 at 1.14.05 PM.jpeg");*/
+        }
+        .top-right-round-image {
+                position: absolute;
+                top: 20px;  /* Adjust the distance from the top */
+                left: 20px; /* Adjust the distance from the right */
+                width: 100px; /* Adjust the size of the image */
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        .container,.landscaping_design ,.welding_des{
+            display: flex;
+            /*align-items: center;*/
+            justify-content: space-between;
+            padding: 50px;
+            max-width: 1500px;
+            margin: 0 auto;
+            align-items: flex-start; /* Align items at the top */
+        }
+        .welding_des {
+            flex: 1;
+            margin-left: 8px;
+            padding: 50px;
+            max-width: 600px;
+        }
+        .text-content, .lands, .welding_des {
+            max-width: 50%;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #030303;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: rgba(18, 22, 24, 0.74)
+        }
+        .image-weld {
+            width: 300px; /* Adjust the width to reduce the size */
+            height: auto; /* Maintain the aspect ratio */
+            margin-right: 20px
+        }
+        .row_1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+    </style>
+</head>
+<body style="background: #94a2a5">
+{% block content %}
+<div style="background: #94a2a5;padding: 10px">
+    <div class="row_1">
+
+          <div class="logo">
+            <img style="padding-left: 30%" src="../../static/Laswo/logo.jpeg" alt="Logo" class="logo-image">
+          </div>
+    </div>
+    <div  class="container">
+        <div class="text-content">
+            <h1>Renovation</h1>
+            <p>In construction, The only project that goes exactly according to plan is lunch break. So yes, you might
+                have a house with a design that doesn't please due to advanced lifestyle designs or probably a mess up
+                by past constructors. Luckily Laswo has the power to redesign your house to a design of your own desire.
+                Here are some of the pictures of the houses renovated by Laswo</p>
+        </div>
+        <div class="image-content">
+        </div>
+    </div>
+    <div class = "landscaping_design">
+        <div class="lands">
+        <h1>Landscaping</h1>
+            <p>The beauty outside matters. Getting out of your house landing and relaxing in a well
+                leveled compund is another underrated feeling of peace. Laswo provides landscaping
+                in its own unique way. Trust us with your peace.
+            </p>
+        </div>
+        <div class="image-landscape">
+
+        </div>
+    </div>
+    <div class="welding_des">
+        <div class="welds">
+            <h1>Welding</h1>
+
+            <p>Our company specializes in providing high-quality welding services tailored to meet the unique needs of each project.
+                 With experienced professionals and state-of-the-art equipment,
+                  we handle everything from small repairs to large-scale fabrication jobs.
+                  We ensure precision, durability, and safety in every weld,
+                  adhering to industry standards and delivering results that stand the test of time.
+                  Whether you need structural welding, custom metalwork, or specialized welding solutions, we are committed to delivering exceptional craftsmanship and reliable service.
+                  We also do metal roofing on house building.
+            </p>
+        </div>
+    </div>
+        <br>
+        <p>   These are some of the services we offer at Laswo. There's more that Laswo does, feel free to contact and inquire.</p>
+{% endblock %}
+</div>
+</body>
+</html>
+

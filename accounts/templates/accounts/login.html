@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!--    bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <style>
+       .container{
+           background-color: #94a2a5;
+
+       }
+        .logo {
+            text-align: left;
+            border-radius:20px;
+            width: 100px
+        }
+
+   </style>
+</head>
+<body>
+  <div class="container">
+      <div class="logo">
+        <div class="logo">
+            <img style="padding-left: 30%" src="../../static/Laswo/logo.jpeg" alt="Logo" class="logo-image">
+          </div>
+      </div>
+      <div class="row_1">
+          <h5 style="font-size:15px">
+             Welcome to Laswo studios Engineers. A company to change your dream home to reality.
+              Laswo is a construction company that deals with all sorts of constructions that you may need.
+
+          </h5>
+          <h5 style="font-size: larger">
+              This website will help you post your services that you wish Laswo could deliver to you.
+              The Projects navigation bar after login will help you upload all the service description.
+              Click on it and add all the projects you wish the company to deliver.
+
+          </h5>
+
+          <h3 style="padding-left: 500px">
+              WELCOME
+          </h3>
+
+      </div>
+         <div class="form-control">
+      <h4 style="padding-left: 100px">Login</h4>
+      <form method="POST">
+             {% csrf_token %}
+          <input type="text" name="username"
+                 placeholder="Enter Username"
+                 class="form-control"/>
+          <br>
+          <br>
+          <input type="password" name="password"
+                 placeholder="Enter Password"
+                 class="form-control"/>
+          <br>
+          <br>
+          <button type="submit"
+                  class="btn btn-primary">Login</button>
+      </form>
+          </div>
+  </div>
+
+</body>
+</html>

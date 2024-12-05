@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task add</title>
+    <link href="../../static/style.css" rel="stylesheet">
+    <style>
+.container{
+    list-style: none;
+    margin: 15px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content:center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width:50%;
+    z-index: 1000;
+    background-color: #f8f9fa;
+    align-items: center;
+}
+.row-1{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+.row-1{
+    background-image: url("../../static/house.jpeg");
+}
+    </style>
+</head>
+<body>
+<div class="row-1">
+    <div class="logo">
+    <img src="../../static/logo.jpeg" alt="Logo" class="logo-image">
+    </div>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul style="justify-content:center;; display: flex; position: fixed; top: 0;margin: 0 15px; width: 50%; z-index: 1000;padding:10px; background-color: #f8f9fa; align-items: center;" class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'homepage' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'client' %}">Client</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'photos' %}">Photos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'task' %}">Projects</a></li>
+                </ul>
+            </div>
+    </nav>
+</div>
+
+<div>
+<h3>Add your projects here and you'll be contacted shortly</h3>
+</div>
+<div>
+<a href="{%  url 'task_create'  %}">Click Here to add your Projects</a>
+</div>
+<div>
+<ul>
+    {% for task in tasks%}
+        <li>
+            {{task.Project}}
+            <p>{{ task.completed}}</p>
+            <span>{% if task.completed %} (Project Completed) {% endif %}</span>
+              <a type="btn" class="btn btn-warning"
+               href="{% url 'task_update' task.pk%}">
+                Edit</a>
+            <a type="btn" class="btn btn-danger"
+               href="{% url 'task_delete' task.pk%}">
+                Delete</a>
+
+        </li>
+    {% endfor %}
+</ul>
+</div>
+</div>
+</body>
+</html>
