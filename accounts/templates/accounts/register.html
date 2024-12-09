@@ -51,8 +51,10 @@
           {% csrf_token %}
           {{ form.as_p }}
           <button type="submit" class="btn btn-primary">
-              Register</button>
+              Sign Up</button>
       </form>
+     <p> Already have an account?</p>
+      <a style="color: red;" href="{% url 'login' %}">login</a>
   </div>
  <footer class="bg-light text-center py-4">
         <p style="padding-left: 60px">&copy; 2024 Laswo Studios. All Rights Reserved.</p>

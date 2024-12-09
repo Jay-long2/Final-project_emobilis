@@ -37,8 +37,15 @@
     max-width: 200px;
     height: auto;
 }
-.row-1{
-    background-image: url("../../static/house.jpeg");
+.btn-btn-danger{
+    display: inline-block;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
 }
     </style>
 </head>
@@ -75,14 +82,13 @@
         <li>
             {{task.Project}}
             <p>{{ task.completed}}</p>
-            <span>{% if task.completed %} (Project Completed) {% endif %}</span>
+            <span>{% if task.completed %} #Project "{{task.Project}}" Completed {% endif %}</span>
               <a type="btn" class="btn btn-warning"
                href="{% url 'task_update' task.pk%}">
                 Edit</a>
             <a type="btn" class="btn btn-danger"
                href="{% url 'task_delete' task.pk%}">
                 Delete</a>
-
         </li>
     {% endfor %}
 </ul>
